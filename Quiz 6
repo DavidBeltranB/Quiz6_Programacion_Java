@@ -1,0 +1,115 @@
+// Clase FiguraGeometrica (clase base)
+public class FiguraGeometrica {
+
+  // Atributos
+  private String nombre; 
+  private String color;
+
+  // Constructor
+  public FiguraGeometrica(String nombre, String color) {
+    this.nombre = nombre;
+    this.color = color;
+  }
+
+  // Getters y Setters  
+  public String getNombre() {
+    return nombre;
+  }
+
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
+
+  public String getColor() {
+    return color; 
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  // Métodos
+  public double obtenerArea(){
+    return 0; 
+  }
+  
+  public double obtenerPerimetro(){
+    return 0;
+  }
+  
+}
+
+// Clase Circulo que hereda de FiguraGeometrica
+public class Circulo extends FiguraGeometrica {
+
+  // Atributo
+  private double radio;
+
+  // Constructor 
+  public Circulo(String nombre, String color, double radio) {
+    super(nombre, color); // Llama al constructor de la superclase
+    this.radio = radio;
+  }
+
+  // Getter y Setter para radio
+  
+  // Sobreescribe los métodos para calcular área y perímetro específicos del círculo
+  @Override
+  public double obtenerArea() {
+    return Math.PI * Math.pow(radio, 2); 
+  }
+
+  @Override
+  public double obtenerPerimetro() {
+    return 2 * Math.PI * radio;
+  }
+
+}
+
+// Clase Rectangulo similar a la clase Circulo
+public class Rectangulo extends FiguraGeometrica {
+
+  private double lado1;
+  private double lado2;
+
+  public Rectangulo(String nombre, String color, double lado1, double lado2) {
+    super(nombre, color);
+    this.lado1 = lado1;
+    this.lado2 = lado2;
+  }
+
+  // Getters y Setters
+
+  // Sobreescritura de métodos area y perimetro
+  
+}
+
+// Clase Triangulo similar a las anteriores
+public class Triangulo extends FiguraGeometrica {
+
+  private double base;
+  private double altura;
+
+  public Triangulo(String nombre, String color, double base, double altura) {
+    super(nombre, color);
+    this.base = base;
+    this.altura = altura;
+  }
+
+  // Getters y Setters
+
+  // Sobreescritura de métodos área y perímetro
+  
+}
+
+public class Main {
+  public static void main(String[] args) {
+
+    // Código para leer por consola los datos de la figura
+
+    // Creación de objeto según tipo de figura ingresado
+
+    // Imprimir área y perímetro
+
+  }
+}
